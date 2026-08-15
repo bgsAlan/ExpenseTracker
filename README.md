@@ -83,7 +83,7 @@ JWT_SECRET=your_generated_secret
 
 ### Transaction
 | Method | Endpoint | Deskripsi | Auth |
-| :--- --| :--- | :--- | :---: |
+| :--- | :--- | :--- | :---: |
 | GET    | `/api/transaction` | Lihat semua transaksi | ✅ |
 | GET    | `/api/transaction/{transaction}` | Lihat Transaksi sesuai ID | ✅ |
 | POST   | `/api/transaction` | Tambah transaksi baru | ✅ |
