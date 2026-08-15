@@ -89,7 +89,7 @@ JWT_SECRET=your_generated_secret
 | PUT    | `/api/transaction/{transaction}` | Edit transaksi sesuai ID | ✅ |
 | DELETE | `/api/transaction` | Hapus transaksi sesuai ID | ✅ |
 
-    CRUD untuk transaction masih belum lengkap (baru store) — bisa jadi salah satu item di roadmap.
+### CRUD untuk transaction masih belum lengkap (baru store) — bisa jadi salah satu item di roadmap.
 
 Untuk endpoint yang memerlukan auth (✅), sertakan header: Authorization: Bearer <your_token>
 
