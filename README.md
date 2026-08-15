@@ -61,6 +61,7 @@ JWT_SECRET=your_generated_secret
 | POST | `/api/register` | Registrasi user baru | ❌ |
 | POST | `/api/login` | Login & dapatkan JWT token | ❌ |
 | GET | `/api/me` | Ambil data user yang login | ✅ |
+| POST | `/api/logout` | Hapus token user yang login | ✅ |
 
 ### Account
 | Method | Endpoint | Deskripsi | Auth |
