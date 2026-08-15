@@ -95,7 +95,7 @@ JWT_SECRET=your_generated_secret
 Untuk endpoint yang memerlukan auth (✅), sertakan header: Authorization: Bearer <your_token>
 
 Contoh Request — Login
-json
+``` json
 POST /api/login
 {
   "email": "user@example.com",
@@ -128,7 +128,7 @@ POST /api/transaction
   "description": "Makan siang",
   "date": "2026-08-14"
 }
-
+```
 Sesuaikan field di atas dengan struktur TransactionController@store dan validasi yang sebenarnya kamu pakai.
 
 🧪 Testing
