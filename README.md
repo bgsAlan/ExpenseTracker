@@ -33,40 +33,61 @@ php artisan jwt:secret
 php artisan migrate
 
 # 6. Jalankan server
+## Cara Menjalankan
+
+```bash
 php artisan serve
- Environment Variables
-Pastikan konfigurasi berikut sudah diisi di .env:
-env
+```
+
+## Environment Variables
+
+Pastikan konfigurasi berikut sudah diisi di `.env`:
+
+```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=expense_tracker
 DB_USERNAME=root
 DB_PASSWORD=
-
 JWT_SECRET=your_generated_secret
-API Endpoints
-Auth
-Method	Endpoint	Deskripsi	Auth
-POST	/api/register	Registrasi user baru	❌
-POST	/api/login	Login & dapatkan JWT token	❌
-GET	/api/me	Ambil data user yang login	✅
-Account
-Method	Endpoint	Deskripsi	Auth
-GET	/api/account	Ambil semua account	✅
-POST	/api/account	Tambah account baru	✅
-GET	/api/account/{account}	Detail satu account	✅
-PUT	/api/account/{account}	Update account	✅
-DELETE	/api/account/{account}	Hapus account	✅
-Category
-Method	Endpoint	Deskripsi	Auth
-GET	/api/category	Ambil semua kategori	✅
-POST	/api/category	Tambah kategori baru	✅
-GET	/api/category/{category}	Detail satu kategori	✅
-PUT	/api/category/{category}	Update kategori	✅
-Transaction
-Method	Endpoint	Deskripsi	Auth
-POST	/api/transaction	Tambah transaksi baru	✅
+```
+
+## API Endpoints
+
+### Auth
+| Method | Endpoint | Deskripsi | Auth |
+| :--- | :--- | :--- | :---: |
+| POST | `/api/register` | Registrasi user baru | ❌ |
+| POST | `/api/login` | Login & dapatkan JWT token | ❌ |
+| GET | `/api/me` | Ambil data user yang login | ✅ |
+
+### Account
+| Method | Endpoint | Deskripsi | Auth |
+| :--- | :--- | :--- | :---: |
+| GET | `/api/account` | Ambil semua account | ✅ |
+| POST | `/api/account` | Tambah account baru | ✅ |
+| GET | `/api/account/{account}` | Detail satu account | ✅ |
+| PUT | `/api/account/{account}` | Update account | ✅ |
+| DELETE | `/api/account/{account}` | Hapus account | ✅ |
+
+### Category
+| Method | Endpoint | Deskripsi | Auth |
+| :--- | :--- | :--- | :---: |
+| GET | `/api/category` | Ambil semua kategori | ✅ |
+| POST | `/api/category` | Tambah kategori baru | ✅ |
+| GET | `/api/category/{category}` | Detail satu kategori | ✅ |
+| PUT | `/api/category/{category}` | Update kategori | ✅ |
+| DELETE | `/api/category/{category}` | Delete kategori | ✅ |
+
+### Transaction
+| Method | Endpoint | Deskripsi | Auth |
+| :--- --| :--- | :--- | :---: |
+| GET    | `/api/transaction` | Lihat semua transaksi | ✅ |
+| GET    | `/api/transaction/{transaction}` | Lihat Transaksi sesuai ID | ✅ |
+| POST   | `/api/transaction` | Tambah transaksi baru | ✅ |
+| PUT    | `/api/transaction/{transaction}` | Edit transaksi sesuai ID | ✅ |
+| DELETE | `/api/transaction` | Hapus transaksi sesuai ID | ✅ |
 
     CRUD untuk transaction masih belum lengkap (baru store) — bisa jadi salah satu item di roadmap.
 
